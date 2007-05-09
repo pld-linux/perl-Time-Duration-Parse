@@ -6,7 +6,7 @@
 %define	pdir	Time
 %define	pnam	Duration-Parse
 Summary:	Time::Duration::Parse - Parse string that represents time duration
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Time::Duration::Parse - analiza łańcuchów reprezentujących okresy czasu
 Name:		perl-Time-Duration-Parse
 Version:	0.02
 Release:	1
@@ -20,7 +20,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Exporter-Lite
-BuildRequires:	perl(Time::Duration)
+BuildRequires:	perl-Time-Duration
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,8 +32,13 @@ strings like 2 minutes and 3 seconds to seconds.
 It does the opposite of duration_exact function in Time::Duration
 and is roundtrip safe.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Time::Duration::Parse to moduł przeliczający na sekundy czytelne dla
+człowieka łańcuchy reprezentujące okresy czasu, takie jak "2 minutes"
+czy "3 seconds".
+
+Działa odwrotnie do funkcji duration_exact z modułu Time::Duration i
+jest odporny na przekręcenia zegara.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

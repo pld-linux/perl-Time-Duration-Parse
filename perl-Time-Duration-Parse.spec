@@ -8,13 +8,13 @@
 Summary:	Time::Duration::Parse - Parse string that represents time duration
 Summary(pl.UTF-8):	Time::Duration::Parse - analiza łańcuchów reprezentujących okresy czasu
 Name:		perl-Time-Duration-Parse
-Version:	0.02
+Version:	0.06
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Time/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	56e1c1674a5180d32927a130fd739d96
+# Source0-md5:	a23b7ca50a909df57e484cf39a3fa414
 URL:		http://search.cpan.org/dist/Time-Duration-Parse/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
